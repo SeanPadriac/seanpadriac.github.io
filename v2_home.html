@@ -1,0 +1,237 @@
+html<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sean Padriac | Home</title>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif; 
+            background-color: #16171a; 
+            color: #b3b7bd; 
+            margin: 0; padding: 0; 
+            line-height: 1.6; 
+            -webkit-font-smoothing: antialiased; 
+        }
+        
+        /* Thin Minimal Fixed Navigation */
+        nav { 
+            position: fixed; top: 0; left: 0; right: 0; 
+            background-color: rgba(22, 23, 26, 0.98); 
+            border-bottom: 1px solid #232429; 
+            display: flex; justify-content: center; 
+            padding: 16px; z-index: 1000; 
+        }
+        nav a { 
+            color: #8a8d93; text-decoration: none; 
+            margin: 0 25px; font-weight: 400; font-size: 0.75rem; 
+            text-transform: uppercase; letter-spacing: 2px; 
+            transition: color 0.2s ease; 
+        }
+        nav a:hover, nav a.active { color: #ffffff; }
+        
+        /* Premium Studio Linear Logo Stamp Section */
+        header { 
+            text-align: center; 
+            padding: 150px 20px 20px 20px; 
+            max-width: 450px;
+            margin: 0 auto;
+        }
+        
+        .studio-logo-frame {
+            border-top: 1px solid #e5e7eb;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 15px 0;
+            margin-bottom: 20px;
+        }
+        
+        .studio-logo-frame h1 { 
+            font-size: 2rem; 
+            margin: 0; 
+            font-weight: 300; 
+            letter-spacing: 12px; 
+            text-transform: uppercase; 
+            color: #ffffff;
+            text-indent: 12px;
+        }
+        
+        /* Centered Image Component Directly Below Name Block */
+        .hero-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        .hero-image-container img { 
+            max-width: 100%;
+            height: auto; 
+            border-radius: 4px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            display: block;
+        }
+
+        .subtitle { 
+            color: #b3b7bd; 
+            letter-spacing: 1px; 
+            font-size: 0.95rem; 
+            margin-top: 15px; 
+            margin-bottom: 40px; 
+            font-style: italic;
+            border-bottom: 1px solid #232429;
+            padding-bottom: 40px;
+        }
+        
+        main { max-width: 750px; margin: 0 auto; padding: 20px; }
+        
+        /* Dedicated Purpose & Mission Section */
+        .mission-section { 
+            border-bottom: 1px solid #232429;
+            padding: 0 0 35px 0; 
+            margin: 10px 0 50px 0;
+            text-align: center;
+        }
+        .mission-section h2 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        .mission-section p {
+            margin: 0 0 15px 0;
+            font-size: 1rem;
+            color: #b3b7bd;
+        }
+        .mission-section .cta-text {
+            font-style: italic;
+            color: #ffffff;
+            margin-bottom: 0;
+        }
+        
+        /* Minimalist Square Bio Container */
+        .profile-container { 
+            display: flex; align-items: center; gap: 30px; 
+            margin-bottom: 50px; 
+        }
+        .bio-square { 
+            width: 120px; height: 120px; 
+            border: 1px solid #232429; 
+            overflow: hidden; flex-shrink: 0; 
+        }
+        .bio-square img { width: 100%; height: 100%; object-fit: cover; }
+        .bio-text h2 { margin: 0 0 10px 0; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1.5px; color: #ffffff; font-weight: 500; }
+        
+        /* Scalable Catalog Index Container */
+        .track-list-title { text-transform: uppercase; font-size: 1rem; letter-spacing: 2px; margin-bottom: 10px; color: #ffffff; font-weight: 500; border-bottom: 1px solid #232429; padding-bottom: 10px;}
+        .catalog-container { margin-bottom: 60px; }
+        
+        .track-item { 
+            border-bottom: 1px solid #1f2024; 
+            padding: 20px 0; 
+            display: flex; justify-content: space-between; align-items: center; 
+            flex-wrap: wrap; gap: 15px; 
+        }
+        .track-item:last-child { border-bottom: 1px solid #232429; }
+        .track-meta { font-size: 1.05rem; color: #ffffff; font-weight: 400; }
+        .track-genre { color: #8a8d93; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; display: block; margin-top: 2px; }
+        
+        .btn-group { display: flex; gap: 15px; }
+        .btn { 
+            color: #b3b7bd; text-decoration: none; 
+            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; 
+            transition: color 0.2s ease; padding: 4px 0;
+            border-bottom: 1px solid transparent;
+        }
+        .btn:hover { color: #ffffff; border-bottom: 1px solid #ffffff; }
+        .btn-main { color: #ffffff; font-weight: 600; }
+        
+        footer { text-align: center; padding: 60px 20px; color: #8a8d93; font-size: 0.7rem; border-top: 1px solid #232429; margin-top: 80px; letter-spacing: 1.5px; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="v2_home.html" class="active">Home</a>
+        <a href="v2_songs.html">My Songs</a>
+        <a href="v2_about.html">About the Artist</a>
+        <a href="v2_licensing.html">Licensing</a>
+    </nav>
+    <header>
+        <!-- Custom Geometric Text Logo Framework -->
+        <div class="studio-logo-frame">
+            <h1>Sean Padriac</h1>
+        </div>
+        
+        <!-- Local Guitar Image Display Slot -->
+        <div class="hero-image-container">
+            <img src="./studio_guitars.jpg" alt="Sean Padriac Acoustic Guitar Collection">
+        </div>
+
+        <div class="subtitle">A catalogue of new songs and ideas as part of my debut New Tricks Old Dog.</div>
+    </header>
+    <main>
+
+        <!-- Purpose & Mission Section -->
+        <section class="mission-section">
+            <h2>Purpose & Mission</h2>
+            <p>The core purpose of this site is to share the music I have created for people to enjoy, while simultaneously providing a dedicated platform to give back. I wanted to make a difference somehow and realized I could contribute through my art. Because of this, <strong>50% of all licensing proceeds and digital download contributions are shared directly with the MS Society</strong> to support vital research and family resources.</p>
+            <p class="cta-text">So listen, enjoy, and donate what you can.</p>
+        </section>
+        
+        <!-- Updated Introduction Section with Core Preferences -->
+        <div class="profile-container">
+            <div class="bio-square"><img src="./bio.jpg" alt="Sean Padriac Portfolio Headshot"></div>
+            <div class="bio-text">
+                <h2>Introduction</h2>
+                <p style="margin:0;">Sean is a singer songwriter of original compositions. His focus is mostly on acoustic based instruments including guitar and piano.</p>
+            </div>
+        </div>
+
+        <!-- 15-Song Scalable Catalog Feed -->
+        <div class="track-list-title">Catalogue</div>
+        <div class="catalog-container">
+            
+            <div class="track-item">
+                <div><span class="track-meta">Time</span><span class="track-genre">Original Mix</span></div>
+                <div class="btn-group">
+                    <a href="#" class="btn btn-main">Download</a>
+                    <a href="#" class="btn" target="_blank">Spotify</a>
+                    <a href="#" class="btn" target="_blank">iTunes</a>
+                </div>
+            </div>
+
+            <div class="track-item">
+                <div><span class="track-meta">Pink</span><span class="track-genre">Original Mix</span></div>
+                <div class="btn-group">
+                    <a href="#" class="btn btn-main">Download</a>
+                    <a href="#" class="btn" target="_blank">Spotify</a>
+                    <a href="#" class="btn" target="_blank">iTunes</a>
+                </div>
+            </div>
+
+            <div class="track-item">
+                <div><span class="track-meta">Olivia</span><span class="track-genre">Original Mix</span></div>
+                <div class="btn-group">
+                    <a href="#" class="btn btn-main">Download</a>
+                    <a href="#" class="btn" target="_blank">Spotify</a>
+                    <a href="#" class="btn" target="_blank">iTunes</a>
+                </div>
+            </div>
+
+            <div class="track-item">
+                <div><span class="track-meta">Something she said</span><span class="track-genre">Original Mix</span></div>
+                <div class="btn-group">
+                    <a href="#" class="btn btn-main">Download</a>
+                    <a href="#" class="btn" target="_blank">Spotify</a>
+                    <a href="#" class="btn" target="_blank">iTunes</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer><p>&copy; 2026 Sean Padriac. Shared accountability layout with the MS Society.</p></footer>
+</body>
+</html>
