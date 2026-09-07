@@ -41,12 +41,19 @@ html<!DOCTYPE html>
         <a href="v2_licensing.html">Licensing</a>
     </nav>
     <main>
-        <!-- Elegant Flex Row Container: Profile Headshot + Header Display -->
-        <div style="display: flex; align-items: center; gap: 25px; margin-top: 30px; margin-bottom: 35px; border-bottom: 1px solid #232429; padding-bottom: 35px;">
-            <!-- Your Synchronized Portfolio Headshot Element -->
-            <div style="width: 100px; height: 100px; border: 1px solid #232429; overflow: hidden; flex-shrink: 0; border-radius: 4px;">
-                <img src="bio.jpg" alt="Sean Padraic Portfolio Headshot" style="width: 100%; height: 100%; object-fit: cover;">
+       <!-- Robust Standalone Header Component Block -->
+        <div style="display: flex; align-items: center; justify-content: flex-start; gap: 25px; width: 100%; margin: 40px auto 35px auto; padding: 0 0 35px 0; border-bottom: 1px solid #232429; box-sizing: border-box; clear: both;">
+            
+            <!-- Standardized Image Block Frame -->
+            <div style="width: 100px; height: 100px; min-width: 100px; min-height: 100px; border: 1px solid #232429; overflow: hidden; border-radius: 4px; display: block; background-color: #1a1b1f;">
+                <img src="bio.jpg" alt="Sean Padraic Portfolio Headshot" style="width: 100%; height: 100%; object-fit: cover; display: block;">
             </div>
+            
+            <!-- Clean Header Text Column -->
+            <div style="display: block;">
+                <h1 style="margin: 0; text-transform: uppercase; font-size: 1.25rem; letter-spacing: 2px; color: #ffffff; font-weight: 500; line-height: 1.2;">About the Artist</h1>
+            </div>
+        </div>
             
             <!-- Your Clean Typography Section Header -->
             <h1 style="margin: 0; text-transform: uppercase; font-size: 1.25rem; letter-spacing: 2px; color: #ffffff; font-weight: 500;">About the Artist</h1>
