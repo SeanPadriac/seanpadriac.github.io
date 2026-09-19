@@ -1,114 +1,261 @@
-<!DOCTYPE html>
+html<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sean Padraic | Home</title>
-    <meta name="google-site-verification" content="google_verification_code_goes_here" />
     <style>
-        body { background-color: #16171a; color: #b3b7bd; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; display: flex; justify-content: center; min-height: 100vh; }
-        .main-container { max-width: 650px; width: 100%; padding: 40px 20px; box-sizing: border-box; }
-        nav { display: flex; justify-content: center; margin-bottom: 50px; border-bottom: 1px solid #232429; padding-bottom: 20px; }
-        nav a { color: #8a8d93; text-decoration: none; margin: 0 15px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 500; transition: color 0.2s ease; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif; 
+            background-color: #16171a; 
+            color: #b3b7bd; 
+            margin: 0; padding: 0; 
+            line-height: 1.6; 
+            -webkit-font-smoothing: antialiased; 
+        }
+        
+        /* Thin Minimal Fixed Navigation */
+        nav { 
+            position: fixed; top: 0; left: 0; right: 0; 
+            background-color: rgba(22, 23, 26, 0.98); 
+            border-bottom: 1px solid #232429; 
+            display: flex; justify-content: center; 
+            padding: 16px; z-index: 1000; 
+        }
+        nav a { 
+            color: #8a8d93; text-decoration: none; 
+            margin: 0 25px; font-weight: 400; font-size: 0.75rem; 
+            text-transform: uppercase; letter-spacing: 2px; 
+            transition: color 0.2s ease; 
+        }
         nav a:hover, nav a.active { color: #ffffff; }
-        header { text-align: center; margin-bottom: 50px; }
-        .studio-logo-frame { border-top: 1px solid #ffffff; border-bottom: 1px solid #ffffff; padding: 15px 0; margin-bottom: 30px; }
-        .studio-logo-frame h1 { font-size: 1.6rem; margin: 0; font-weight: 300; letter-spacing: 10px; text-transform: uppercase; color: #ffffff; text-indent: 10px; }
-        .hero-image-container img { width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); }
-        .mission-section { margin-bottom: 60px; line-height: 1.6; font-size: 0.95rem; }
-        .mission-section h2 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; color: #ffffff; font-weight: 500; margin-bottom: 20px; }
-        .cta-text { font-style: italic; color: #ffffff; margin-top: 25px; font-size: 0.95rem; }
-        .track-list-title { text-transform: uppercase; font-size: 1rem; letter-spacing: 2px; color: #ffffff; font-weight: 500; margin-bottom: 20px; border-bottom: 1px solid #232429; padding-bottom: 10px; }
+        
+        /* Premium Studio Linear Logo Stamp Section */
+        header { 
+            text-align: center; 
+            padding: 150px 20px 20px 20px; 
+            max-width: 450px;
+            margin: 0 auto;
+        }
+        
+        .studio-logo-frame {
+            border-top: 1px solid #e5e7eb;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 15px 0;
+            margin-bottom: 20px;
+        }
+        
+        .studio-logo-frame h1 { 
+            font-size: 2rem; 
+            margin: 0; 
+            font-weight: 300; 
+            letter-spacing: 12px; 
+            text-transform: uppercase; 
+            color: #ffffff;
+            text-indent: 12px;
+        }
+        
+        /* Centered Image Component Directly Below Name Block */
+        .hero-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        .hero-image-container img { 
+            max-width: 100%;
+            height: auto; 
+            border-radius: 4px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            display: block;
+        }
+
+        .subtitle { 
+            color: #b3b7bd; 
+            letter-spacing: 1px; 
+            font-size: 0.95rem; 
+            margin-top: 15px; 
+            margin-bottom: 40px; 
+            font-style: italic;
+            border-bottom: 1px solid #232429;
+            padding-bottom: 40px;
+        }
+        
+        main { max-width: 750px; margin: 0 auto; padding: 20px; }
+        
+        /* Dedicated Purpose & Mission Section */
+        .mission-section { 
+            border-bottom: 1px solid #232429;
+            padding: 0 0 35px 0; 
+            margin: 10px 0 50px 0;
+            text-align: center;
+        }
+        .mission-section h2 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        .mission-section p {
+            margin: 0 0 15px 0;
+            font-size: 1rem;
+            color: #b3b7bd;
+        }
+        .mission-section .cta-text {
+            font-style: italic;
+            color: #ffffff;
+            margin-bottom: 0;
+        }
+        
+        /* Minimalist Square Bio Container */
+        .profile-container { 
+            display: flex; align-items: center; gap: 30px; 
+            margin-bottom: 50px; 
+        }
+        .bio-square { 
+            width: 120px; height: 120px; 
+            border: 1px solid #232429; 
+            overflow: hidden; flex-shrink: 0; 
+        }
+        .bio-square img { width: 100%; height: 100%; object-fit: cover; }
+        .bio-text h2 { margin: 0 0 10px 0; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1.5px; color: #ffffff; font-weight: 500; }
+        
+        /* Scalable Catalog Index Container */
+        .track-list-title { text-transform: uppercase; font-size: 1rem; letter-spacing: 2px; margin-bottom: 10px; color: #ffffff; font-weight: 500; border-bottom: 1px solid #232429; padding-bottom: 10px;}
         .catalog-container { margin-bottom: 60px; }
-        .track-item { border-bottom: 1px solid #232429; padding: 20px 0; display: block; }
+        
+        .track-item { 
+            border-bottom: 1px solid #1f2024; 
+            padding: 20px 0; 
+            display: flex; justify-content: space-between; align-items: center; 
+            flex-wrap: wrap; gap: 15px; 
+        }
+        .track-item:last-child { border-bottom: 1px solid #232429; }
         .track-meta { font-size: 1.05rem; color: #ffffff; font-weight: 400; }
         .track-genre { color: #8a8d93; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; display: block; margin-top: 2px; }
-        .btn-group { display: flex; gap: 15px; margin-top: 12px; justify-content: flex-end; }
-        .btn { color: #b3b7bd; text-decoration: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; transition: color 0.2s ease; padding: 4px 0; border-bottom: 1px solid transparent; }
+        
+        .btn-group { display: flex; gap: 15px; }
+        .btn { 
+            color: #b3b7bd; text-decoration: none; 
+            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; 
+            transition: color 0.2s ease; padding: 4px 0;
+            border-bottom: 1px solid transparent;
+        }
         .btn:hover { color: #ffffff; border-bottom: 1px solid #ffffff; }
+        .btn-main { color: #ffffff; font-weight: 600; }
+        
         footer { text-align: center; padding: 60px 20px; color: #8a8d93; font-size: 0.7rem; border-top: 1px solid #232429; margin-top: 80px; letter-spacing: 1.5px; text-transform: uppercase; }
     </style>
 </head>
 <body>
-    <div class="main-container">
-        <nav>
-            <a href="index.html" class="active">Home</a>
-            <a href="v2_songs.html">My Songs</a>
-            <a href="v2_about.html">About the Artist</a>
-            <a href="v2_licensing.html">Licensing</a>
-        </nav>
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="v2_songs.html">My Songs</a>
+        <a href="v2_about.html">About the Artist</a>
+        <a href="v2_licensing.html">Licensing</a>
+    </nav>
+    <header>
+        <!-- Custom Geometric Text Logo Framework -->
+        <div class="studio-logo-frame">
+            <h1>Sean Padraic</h1>
+        </div>
+        
+        <!-- Local Guitar Image Display Slot -->
+        <div class="hero-image-container">
+            <img src="./studio_guitars.jpg" alt="Sean Padraic Acoustic Guitar Collection">
+        </div>
 
-        <header>
-            <div class="studio-logo-frame"><h1>Sean Padraic</h1></div>
-            <div class="hero-image-container"><img src="studio_guitars.jpg" alt="Sean Padraic Acoustic Guitar Collection"></div>
-        </header>
+        <div class="subtitle">A collection of new songs and ideas as part of my debut New Tricks Old Dog.</div>
+    </header>
+    <main>
 
+        <!-- Purpose & Mission Section -->
         <section class="mission-section">
             <h2>Purpose & Mission</h2>
-            <p>The core purpose of this site is to share the music I have created for people to enjoy, while simultaneously providing a dedicated platform to give back. I wanted to make a difference somehow and realized I could contribute through my art. Because of this, <strong>50% of all licensing proceeds and digital download contributions are shared directly with the MS Society</strong> to support vital research and family resources.</p>
+            <p>The core purpose of this site is to share the music I have created for people to enjoy, while providing a dedicated platform to give back. I wanted to make a difference somehow and realized I could contribute through my art. Because of this, <strong>50% of all licensing proceeds and digital download contributions are shared with the MS Society</strong> to support vital research and family resources.</p>
             <p class="cta-text">So listen, enjoy, and donate what you can.</p>
         </section>
+        
+        <!-- Updated Introduction Section with Core Preferences -->
+        <div class="profile-container">
+            <div class="bio-square"><img src="./bio.jpg" alt="Sean padraic Portfolio Headshot"></div>
+            <div class="bio-text">
+                <h2>Introduction</h2>
+                <p style="margin:0;">Sean is a singer songwriter of original compositions. His focus is mostly on acoustic based instruments including guitar and piano.</p>
+            </div>
+        </div>
 
+        <!-- 15-Song Scalable Catalog Feed -->
         <div class="track-list-title">Catalogue</div>
-
         <div class="catalog-container">
-            <!-- Track 1: Time -->
-            <div class="track-item">
+            
+<!-- Track Row 1: Time Clean Embedded Player Row Layout -->
+            <div class="track-item" style="border-bottom: 1px solid #232429; padding: 15px 0; display: block;">
                 <div style="margin-bottom: 12px;"><span class="track-meta">Time</span><span class="track-genre">Original Mix</span></div>
-                <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com" seamless><a href="https://bandcamp.com">Time by Sean Padraic</a></iframe>
-                <div class="btn-group">
-                    <a href="https://spotify.com" class="btn" target="_blank">Spotify Player</a>
-                    <a href="#" class="btn" target="_blank">iTunes Store</a>
+                
+                <!-- PASTE YOUR NATIVE IFRAME CODE FOR TIME ON THE LINE BELOW -->
+               <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=1175060218/size=small/bgcol=333333/linkcol=0f91ff/track=1377493595/transparent=true/" seamless><a href="https://seanpadraicmusic.bandcamp.com/album/new-tricks-old-dog">New Tricks Old Dog by Sean Padraic</a></iframe>
+                
+                <div class="btn-group" style="margin-top: 12px; justify-content: flex-end;">
+                    <a href="https://open.spotify.com/track/2rfh1RlPkfZYiv4gRqm0ui" class="btn" target="_blank">Spotify Player</a>
+                    <a href="https://music.apple.com/album/6802283867?i=6802283868" class="btn" target="_blank">iTunes Store</a>
                 </div>
             </div>
-
-            <!-- Track 2: Pink -->
-            <div class="track-item">
+            <!-- Track Row 2: Pink Clean Embedded Player Row Layout -->
+            <div class="track-item" style="border-bottom: 1px solid #232429; padding: 15px 0; display: block;">
                 <div style="margin-bottom: 12px;"><span class="track-meta">Pink</span><span class="track-genre">Original Mix</span></div>
-                <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com" seamless><a href="https://bandcamp.com">Pink by Sean Padraic</a></iframe>
-                <div class="btn-group">
-                    <a href="https://spotify.com" class="btn" target="_blank">Spotify Player</a>
-                    <a href="#" class="btn" target="_blank">iTunes Store</a>
+                
+                <!-- PASTE YOUR NEW NATIVE IFRAME CODE FOR PINK ON THE LINE BELOW -->
+              <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=1175060218/size=small/bgcol=333333/linkcol=0f91ff/track=1501066459/transparent=true/" seamless><a href="https://seanpadraicmusic.bandcamp.com/album/new-tricks-old-dog">New Tricks Old Dog by Sean Padraic</a></iframe>
+
+                
+                <div class="btn-group" style="margin-top: 12px; justify-content: flex-end;">
+                    <a href="https://open.spotify.com/track/4jXSzy4Q5jWv7NeGNbFRzC" class="btn" target="_blank">Spotify Player</a>
+                    <a href="https://music.apple.com/album/6802283867?i=6802283870"class="btn" target="_blank">iTunes Store</a>
                 </div>
             </div>
 
-            <!-- Track 3: Olivia -->
-            <div class="track-item">
+            <!-- Track Row 3: Olivia Clean Embedded Player Row Layout -->
+            <div class="track-item" style="border-bottom: 1px solid #232429; padding: 15px 0; display: block;">
                 <div style="margin-bottom: 12px;"><span class="track-meta">Olivia</span><span class="track-genre">Original Mix</span></div>
-                <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com" seamless><a href="https://bandcamp.com">Olivia by Sean Padraic</a></iframe>
-                <div class="btn-group">
-                    <a href="https://spotify.com" class="btn" target="_blank">Spotify Player</a>
-                    <a href="#" class="btn" target="_blank">iTunes Store</a>
+                
+                <!-- PASTE YOUR NEW NATIVE IFRAME CODE FOR OLIVIA ON THE LINE BELOW -->
+               <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=1175060218/size=small/bgcol=333333/linkcol=0f91ff/track=2294999915/transparent=true/" seamless><a href="https://seanpadraicmusic.bandcamp.com/album/new-tricks-old-dog">New Tricks Old Dog by Sean Padraic</a></iframe>
+                
+                <div class="btn-group" style="margin-top: 12px; justify-content: flex-end;">
+                    <a href="https://open.spotify.com/track/2HTiVEX5tCaWVB8HJz7lh6" class="btn" target="_blank">Spotify Player</a>
+                    <a href="https://music.apple.com/album/6802283867?i=6802283871" class="btn" target="_blank">iTunes Store</a>
                 </div>
             </div>
 
-            <!-- Track 4: Something she said -->
-            <div class="track-item">
+            <!-- Track Row 4: Something she said Clean Embedded Player Row Layout -->
+            <div class="track-item" style="border-bottom: 1px solid #232429; padding: 15px 0; display: block;">
                 <div style="margin-bottom: 12px;"><span class="track-meta">Something she said</span><span class="track-genre">Original Mix</span></div>
-                <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com" seamless><a href="https://bandcamp.com">Something she said by Sean Padraic</a></iframe>
-                <div class="btn-group">
-                    <a href="https://spotify.com" class="btn" target="_blank">Spotify Player</a>
-                    <a href="#" class="btn" target="_blank">iTunes Store</a>
+                
+                <!-- PASTE YOUR NEW NATIVE IFRAME CODE FOR SOMETHING SHE SAID ON THE LINE BELOW -->
+               <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=1175060218/size=small/bgcol=333333/linkcol=0f91ff/track=2440685080/transparent=true/" seamless><a href="https://seanpadraicmusic.bandcamp.com/album/new-tricks-old-dog">New Tricks Old Dog by Sean Padraic</a></iframe>
+                
+                <div class="btn-group" style="margin-top: 12px; justify-content: flex-end;">
+                    <a href="https://open.spotify.com/track/66JctnOFt8pddPz4WJbOOJ" class="btn" target="_blank">Spotify Player</a>
+                    <a href="https://music.apple.com/album/6802283867?i=6802283872" class="btn" target="_blank">iTunes Store</a>
                 </div>
             </div>
-        </div>
 
-        <!-- Direct MS Society Fundraising Support Card Component -->
-        <div style="background-color: #1a1b1f; border: 1px solid #232429; padding: 30px; border-radius: 4px; text-align: center; margin-top: 40px; margin-bottom: 20px;">
-            <div style="font-size: 1.5rem; margin-bottom: 12px;">🎗️</div>
-            <h2 style="font-size: 1rem; text-transform: uppercase; letter-spacing: 2px; color: #ffffff; margin: 0 0 10px 0; font-weight: 500;">Support the Mission Directly</h2>
-            <p style="font-size: 0.85rem; color: #8a8d93; margin: 0 auto 25px auto; line-height: 1.6; max-width: 500px;">If you prefer to contribute directly to the cause without downloading digital files, you can support vital research and resources through my official National MS Society DIY Fundraising page.</p>
-            <a href="https://nationalmssociety.org" style="color: #ffffff; text-decoration: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; border: 1px solid #ffffff; padding: 10px 20px; border-radius: 2px; display: inline-block; transition: background 0.2s;" target="_blank" onmouseover="this.style.backgroundColor='#ffffff'; this.style.color='#16171a'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffffff'">Donate Direct to MS Society</a>
         </div>
-
-        <footer>
-            <p>&copy; 2026 Sean Padraic. Shared accountability layout with the MS Society.</p>
-            <div style="display: flex; justify-content: center; gap: 20px; font-size: 0.75rem; margin-top: 15px; text-transform: uppercase; letter-spacing: 1.5px;">
-                <a href="#" style="color: #b3b7bd; text-decoration: none;" target="_blank">Facebook</a>
-                <a href="#" style="color: #b3b7bd; text-decoration: none;" target="_blank">Instagram</a>
-                <a href="#" style="color: #b3b7bd; text-decoration: none;" target="_blank">YouTube</a>
+ <!-- Direct MS Society Fundraising Support Row Component -->
+            <div style="background-color: #1a1b1f; border: 1px solid #232429; padding: 30px; border-radius: 4px; text-align: center; margin-top: 40px; margin-bottom: 20px;">
+                <div style="font-size: 1.5rem; margin-bottom: 12px;">🎗️</div>
+                <h2 style="font-size: 1rem; text-transform: uppercase; letter-spacing: 2px; color: #ffffff; margin: 0 0 10px 0; font-weight: 500;">Support the Mission Directly</h2>
+                <p style="font-size: 0.85rem; color: #8a8d93; margin: 0 auto 25px auto; line-height: 1.6; max-width: 500px;">If you prefer to contribute directly to the cause without downloading digital files, you can support vital research and resources through my official National MS Society DIY Fundraising page.</p>
+                <a href="https://events.nationalmssociety.org/participants/SeanPadraic-Music" style="color: #ffffff; text-decoration: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; border: 1px solid #ffffff; padding: 10px 20px; border-radius: 2px; display: inline-block; transition: background 0.2s, color 0.2s;" target="_blank" onmouseover="this.style.backgroundColor='#ffffff'; this.style.color='#16171a'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffffff'">Donate Direct to MS Society</a>
             </div>
-        </footer>
-    </div>
+        
+    </main>
+    <footer><p>&copy; 2026 Sean padraic.</p></footer>
 </body>
 </html>
